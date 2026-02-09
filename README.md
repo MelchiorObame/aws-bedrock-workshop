@@ -179,10 +179,27 @@ aws-bedrock-workshop/
 │   ├── python-server/
 │   └── react-client/
 │
+├── strands_agents/                     # Strands Agents Implementation Examples
+│   ├── 01-first-agent/
+│   ├── 02-connecting-with-aws-services/
+│   ├── 03-using-mcp-tools/
+│   ├── 04-agent-as-tool/
+│   ├── 05-agent-workflows/
+│   ├── 06-graph-agent/
+│   └── 07-swarm-agent/
+│
+├── util/                               # Utility modules and helpers
+│   ├── __init__.py
+│   ├── model_constants.py              # Model configuration constants
+│   ├── model_selector.py               # Model selection utilities
+│   ├── strands_retry.py                # Retry logic for agent calls
+│   └── tagging.py                      # AWS resource tagging utilities
+│
 ├── cleanup/                            # Cleanup scripts
 │   └── 01_cleanup.ipynb
 │
 ├── requirements.txt                    # Main dependencies
+├── Agent.md                            # Agents comprehensive guide
 └── README.md                           # This file
 ```
 
