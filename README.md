@@ -12,7 +12,6 @@ The bootcamp is a hands-on enablement program by our AWS Solutions Architects an
 
 | Sujet | Contenu |
 |-------|---------|
-| **Welcome** | Welcome from Thierry Pierre, leader of AWS AI/ML FR specialist team |
 | **GenAI models** | • AWS GenAI offering<br>• Models available in Bedrock<br>• Model selection criteria<br>• Model evaluation |
 | **GenAI patterns** | • Prompt engineering<br>• Multimodality<br>• RAG |
 | **GenAI services** | • Bedrock Data Automation<br>• Amazon Quick Suite |
@@ -31,7 +30,6 @@ The bootcamp is a hands-on enablement program by our AWS Solutions Architects an
 |-------|---------|
 | **Bedrock AgentCore** | • Bedrock AgentCore deep dive<br>• Agents Evaluation and Observability |
 | **AI coding tools and best practices** | • Kiro and Spec Driven Development |
-| **What Next?** | • What to anticipate over the next two weeks<br>• Meet your PA<br>• Ensure account set up<br>• Work on Customer Business Outcomes |
 
 ---
 
@@ -292,6 +290,7 @@ Pour des problèmes d'installation ou des questions techniques :
 - [AWS GenAI Patterns](https://aws.amazon.com/bedrock/)
 - [AgentCore Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-rag.html)
 - [AWS AI/ML Solutions](https://aws.amazon.com/ai/)
+- [Generative AI with Large Language Models-UDEMY] (https://www.coursera.org/learn/generative-ai-with-llms)
 
 ---
 
