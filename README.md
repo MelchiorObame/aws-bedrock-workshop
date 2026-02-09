@@ -1,24 +1,25 @@
 # AWS Bedrock Workshop - Agentic AI Bootcamp
 
-## 📌 À propos du bootcamp
+## 📌 About the Bootcamp
 
 The bootcamp is a hands-on enablement program by our AWS Solutions Architects and Prototyping Architects, where the customer Agentic AI use case gets accelerated through a charge-free co-development and technical knowledge transfer in an on-site, multi-customer classroom setting.
 
 ---
 
-## 📅 Plan de travail
+## 📅 Agenda
 
 ### **Day 1** - Foundations & GenAI Essentials
 
-| Sujet | Contenu |
+| Topic | Content |
 |-------|---------|
+| **Welcome** | Welcome from Thierry Pierre, leader of AWS AI/ML FR specialist team |
 | **GenAI models** | • AWS GenAI offering<br>• Models available in Bedrock<br>• Model selection criteria<br>• Model evaluation |
 | **GenAI patterns** | • Prompt engineering<br>• Multimodality<br>• RAG |
 | **GenAI services** | • Bedrock Data Automation<br>• Amazon Quick Suite |
 
 ### **Day 2** - Agentic AI Architecture & Orchestration
 
-| Sujet | Contenu |
+| Topic | Content |
 |-------|---------|
 | **Architecting Agentic AI Systems** | • Components of Agentic AI systems<br>• MCP |
 | **AI Agent Orchestration** | • Strands Agents<br>• State and sessions<br>• Multi-agents solutions<br>• Model Evaluation and how to approach agents' evaluation and observability |
@@ -26,84 +27,85 @@ The bootcamp is a hands-on enablement program by our AWS Solutions Architects an
 
 ### **Day 3** - Bedrock AgentCore Deep Dive & Wrap-up
 
-| Sujet | Contenu |
+| Topic | Content |
 |-------|---------|
 | **Bedrock AgentCore** | • Bedrock AgentCore deep dive<br>• Agents Evaluation and Observability |
 | **AI coding tools and best practices** | • Kiro and Spec Driven Development |
+| **What Next?** | • What to anticipate over the next two weeks<br>• Meet your PA<br>• Ensure account set up<br>• Work on Customer Business Outcomes |
 
 ---
 
-## 🚀 Démarrage rapide
+## 🚀 Quick Start
 
-### Prérequis
-- Python 3.9 ou supérieur
-- pip (gestionnaire de paquets Python)
+### Prerequisites
+- Python 3.9 or higher
+- pip (Python package manager)
 - Git
 
-### 1️⃣ Créer un environnement virtuel
+### 1️⃣ Create a Virtual Environment
 
-#### Sur macOS/Linux
+#### On macOS/Linux
 ```bash
-# Créer l'environnement virtuel
+# Create the virtual environment
 python3 -m venv venv
 
-# Activer l'environnement virtuel
+# Activate the virtual environment
 source venv/bin/activate
 ```
 
-#### Sur Windows
+#### On Windows
 ```bash
-# Créer l'environnement virtuel
+# Create the virtual environment
 python -m venv venv
 
-# Activer l'environnement virtuel
+# Activate the virtual environment
 venv\Scripts\activate
 ```
 
-### 2️⃣ Installer les dépendances
+### 2️⃣ Install Dependencies
 
-Une fois l'environnement virtuel activé, installez les requirements :
+Once the virtual environment is activated, install the requirements:
 
 ```bash
-# Installer les packages principaux
+# Install main packages
 pip install -r requirements.txt
 
-# Si vous travaillez sur les labs AgentCore
+# If you're working on AgentCore labs
 cd agentcore
 pip install -r requirements-agent.txt
 cd ..
 ```
 
-### 3️⃣ Vérifier l'installation
+### 3️⃣ Verify Installation
 
 ```bash
-# Vérifier que tout est installé correctement
+# Verify that everything is installed correctly
 pip list
 ```
 
-### 4️⃣ Configuration AWS
+### 4️⃣ AWS Configuration
 
-Avant de commencer, assurez-vous que vos credentials AWS sont configurées. Vous pouvez utiliser l'une des deux méthodes suivantes :
+Before getting started, make sure your AWS credentials are configured. You can use one of the two methods below:
 
-#### Option 1 : Avec `aws configure` (standard)
+#### Option 1: With `aws configure` (standard)
 
 ```bash
 aws configure
 ```
 
-Vous aurez besoin de :
+You will need:
 - AWS Access Key ID
 - AWS Secret Access Key
-- Default region (ex: us-east-1)
+- Default region (e.g., us-east-1)
 - Default output format (json)
 
-#### Option 2 : Avec `aws-vault` (recommandé pour la sécurité)
+#### Option 2: With `aws-vault` (recommended for security)
 
-[aws-vault](https://github.com/99designs/aws-vault) est un outil sécurisé pour gérer vos credentials AWS. Il stocke vos credentials dans le trousseau sécurisé de votre système.
+[aws-vault](https://github.com/99designs/aws-vault) is a secure tool for managing your AWS credentials. It stores your credentials in your system's secure keychain.
 
-**Installation** :
+**Installation**:
 ```bash
-# macOS (avec Homebrew)
+# macOS (with Homebrew)
 brew install aws-vault
 
 # Linux
@@ -115,31 +117,31 @@ sudo mv aws-vault /usr/local/bin
 choco install aws-vault
 ```
 
-**Configuration** :
+**Configuration**:
 ```bash
-# Ajouter vos credentials
+# Add your credentials
 aws-vault add default
 
-# Vérifier la configuration
+# Verify configuration
 aws-vault list
 ```
 
-**Utilisation** :
+**Usage**:
 ```bash
-# Exécuter une commande AWS de manière sécurisée
+# Execute an AWS command securely
 aws-vault exec default -- aws s3 ls
 
-# Ou lancer Jupyter avec les credentials
+# Or launch Jupyter with credentials
 aws-vault exec default -- jupyter notebook
 ```
 
 ---
 
-## 📂 Structure du projet
+## 📂 Project Structure
 
 ```
 aws-bedrock-workshop/
-├── agentcore/                          # Labs AgentCore (1-7)
+├── agentcore/                          # AgentCore Labs (1-7)
 │   ├── lab-01-create-an-agent.ipynb
 │   ├── lab-02-agentcore-memory.ipynb
 │   ├── lab-03-agentcore-gateway.ipynb
@@ -147,58 +149,58 @@ aws-bedrock-workshop/
 │   ├── lab-05-agentcore-evals.ipynb
 │   ├── lab-06-frontend.ipynb
 │   ├── lab-07-agentcore-policy.ipynb
-│   ├── lab_helpers/                    # Utilitaires pour les labs
-│   ├── prerequisite/                   # Infrastructure CloudFormation
-│   └── scripts/                        # Scripts d'aide
+│   ├── lab_helpers/                    # Lab utilities
+│   ├── prerequisite/                   # CloudFormation infrastructure
+│   └── scripts/                        # Helper scripts
 │
-├── architecture_patterns/              # Patterns d'architecture GenAI
+├── architecture_patterns/              # GenAI architecture patterns
 │   └── 01_text_and_code_generation_w_bedrock.ipynb
 │
-├── bedrock_data_automation/            # Automation avec Bedrock
+├── bedrock_data_automation/            # Bedrock automation
 │   ├── 01_standard_output_basic_to_advanced.ipynb
 │   └── 02_custom_outputs_and_blueprints.ipynb
 │
-├── guardrails/                         # Sécurité des chatbots
+├── guardrails/                         # Chatbot security
 │   └── 01-secure_chatbots.ipynb
 │
-├── image_and_multimodal/               # Traitement d'images et multimodal
+├── image_and_multimodal/               # Image and multimodal processing
 │   ├── 01_nova-canvas-notebook.ipynb
 │   ├── 02_nova-reel-notebook.ipynb
 │   └── 03_bedrock-titan-multimodal-embeddings.ipynb
 │
-├── knowledgebases_and_rag/             # Knowledge Bases et RAG
+├── knowledgebases_and_rag/             # Knowledge Bases and RAG
 │   ├── 01_create_ingest_documents_test_kb.ipynb
 │   └── 02_managed-rag-kb-retrieve-generate-api.ipynb
 │
-├── speech_to_speech/                   # Text-to-Speech et Speech-to-Text
+├── speech_to_speech/                   # Text-to-Speech and Speech-to-Text
 │   ├── 00_introduction_nova_sonic_console.ipynb
 │   ├── 01_core_functionality.ipynb
 │   ├── 02_repeatable_patterns.ipynb
 │   ├── python-server/
 │   └── react-client/
 │
-├── cleanup/                            # Scripts de nettoyage
+├── cleanup/                            # Cleanup scripts
 │   └── 01_cleanup.ipynb
 │
-├── requirements.txt                    # Dépendances principales
-└── README.md                           # Ce fichier
+├── requirements.txt                    # Main dependencies
+└── README.md                           # This file
 ```
 
 ---
 
-## 📖 Commencer les labs
+## 📖 Starting the Labs
 
-### Démarrer Jupyter Notebook
+### Launch Jupyter Notebook
 
 ```bash
-# Lancer Jupyter Notebook
+# Launch Jupyter Notebook
 jupyter notebook
 
-# Ou lancer Jupyter Lab (plus moderne)
+# Or launch Jupyter Lab (more modern)
 jupyter lab
 ```
 
-Naviguez ensuite vers le dossier `agentcore/` pour commencer les labs :
+Then navigate to the `agentcore/` folder to start the labs:
 - **Lab 1**: Create an Agent
 - **Lab 2**: AgentCore Memory
 - **Lab 3**: AgentCore Gateway
@@ -207,91 +209,93 @@ Naviguez ensuite vers le dossier `agentcore/` pour commencer les labs :
 - **Lab 6**: Frontend
 - **Lab 7**: AgentCore Policy
 
+For more details on Agents, see [Agent.md](Agent.md).
+
 ---
 
-## 🔧 Commandes utiles
+## 🔧 Useful Commands
 
 ```bash
-# Désactiver l'environnement virtuel
+# Deactivate the virtual environment
 deactivate
 
-# Mettre à jour pip
+# Update pip
 pip install --upgrade pip
 
-# Réinstaller les dépendances (si problème)
+# Reinstall dependencies (if issue)
 pip install --force-reinstall -r requirements.txt
 
-# Voir tous les packages installés
+# List all installed packages
 pip list
 
-# Créer un fichier des dépendances actuelles
+# Create a file with current dependencies
 pip freeze > requirements.txt
 ```
 
 ---
 
-## ⚠️ IMPORTANT : Gestion des ressources AWS et des coûts
+## ⚠️ IMPORTANT: AWS Resources Management and Cost Control
 
-Ce bootcamp créera des ressources AWS dans votre compte, notamment :
-- Infrastructure CloudFormation (stacks)
-- Services Bedrock (Agents, Knowledge Bases, etc.)
-- Stockage S3
-- Tables DynamoDB
-- Endpoints SageMaker
-- Et autres ressources cloud
+This bootcamp will create AWS resources in your account, including:
+- CloudFormation infrastructure (stacks)
+- Bedrock services (Agents, Knowledge Bases, etc.)
+- S3 storage
+- DynamoDB tables
+- SageMaker endpoints
+- And other cloud resources
 
-### 🔴 CRITICAL : Nettoyage après le bootcamp
+### 🔴 CRITICAL: Cleanup After Bootcamp
 
-**Ces ressources engendrent des coûts !** Vous devez les supprimer après les labs pour éviter des charges inutiles.
+**These resources incur costs!** You must delete them after the labs to avoid unnecessary charges.
 
 ```bash
-# Utilisez le script de cleanup inclus
+# Use the included cleanup script
 cd cleanup
 jupyter notebook 01_cleanup.ipynb
 
-# Ou exécutez le script de nettoyage
+# Or run the cleanup script
 python cleanup_tagged_resources.py
 ```
 
-**Checklist de nettoyage** :
-- ✅ Arrêtez tous les notebooks Jupyter
-- ✅ Exécutez les scripts de cleanup fournis
-- ✅ Supprimez les stacks CloudFormation manuellement si nécessaire
-- ✅ Vérifiez dans la console AWS que toutes les ressources ont été supprimées
-- ✅ Consultez la section `cleanup/` pour plus de détails
+**Cleanup Checklist**:
+- ✅ Stop all Jupyter notebooks
+- ✅ Run the provided cleanup scripts
+- ✅ Delete CloudFormation stacks manually if necessary
+- ✅ Verify in AWS console that all resources have been deleted
+- ✅ Consult the `cleanup/` section for more details
 
-**Estimation des coûts** : Les coûts varient selon l'utilisation mais peuvent être importants pour certains services. Soyez vigilant !
+**Cost Estimate**: Costs vary depending on usage but can be significant for certain services. Be cautious!
 
 ---
 
-## 📝 Notes importantes
+## 📝 Important Notes
 
-- ✅ Ce bootcamp est une **expérience pratique** - soyez prêts à coder !
-- ✅ Les labs sont **progressifs** - commencez par le Lab 1
-- ✅ Vous aurez besoin d'un **compte AWS** avec accès à Bedrock
-- ✅ Des **Prototyping Architects** seront disponibles pour vous aider
-- ✅ Focus sur les **business outcomes** des clients
-- ⚠️ **NETTOYEZ les ressources après chaque lab pour éviter des coûts supplémentaires**
+- ✅ This bootcamp is a **hands-on experience** - be ready to code!
+- ✅ Labs are **progressive** - start with Lab 1
+- ✅ You'll need an **AWS account** with Bedrock access
+- ✅ **Prototyping Architects** will be available to help you
+- ✅ Focus on **customer business outcomes**
+- ⚠️ **CLEAN UP resources after each lab to avoid extra costs**
 
 ---
 
 ## 🆘 Support
 
-Pour des problèmes d'installation ou des questions techniques :
-1. Consultez les README spécifiques dans chaque dossier
-2. Vérifiez la documentation AWS Bedrock : https://docs.aws.amazon.com/bedrock/
-3. Contactez un Solution Architect ou Prototyping Architect du bootcamp
+For installation issues or technical questions:
+1. Check the specific README files in each folder
+2. Review AWS Bedrock documentation: https://docs.aws.amazon.com/bedrock/
+3. Contact a Solution Architect or Prototyping Architect from the bootcamp
 
 ---
 
-## 📚 Ressources supplémentaires
+## 📚 Additional Resources
 
 - [AWS Bedrock Documentation](https://docs.aws.amazon.com/bedrock/)
 - [AWS GenAI Patterns](https://aws.amazon.com/bedrock/)
 - [AgentCore Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-rag.html)
 - [AWS AI/ML Solutions](https://aws.amazon.com/ai/)
-- [Generative AI with Large Language Models-UDEMY] (https://www.coursera.org/learn/generative-ai-with-llms)
+- [Generative AI with Large Language Models](https://www.coursera.org/learn/generative-ai-with-llms)
 
 ---
 
-**Dernière mise à jour**: Février 2026
+**Last Update**: February 2026
