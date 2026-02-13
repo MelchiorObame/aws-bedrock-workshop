@@ -4,6 +4,7 @@
 
 The bootcamp is a hands-on enablement program by our AWS Solutions Architects and Prototyping Architects, where the customer Agentic AI use case gets accelerated through a charge-free co-development and technical knowledge transfer in an on-site, multi-customer classroom setting.
 
+slidies are in docs/
 ---
 
 ## 📅 Agenda
